@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquez Soluciones Digitales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #e0e0e0;
+            background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        header, footer {
+            background-color: #4b4b4b;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        #servicios ul {
+            list-style: none;
+            padding: 0;
+        }
+        #servicios li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        #servicios img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        #servicios img:hover {
+            transform: scale(1.1);
+        }
+        .descripcion {
+            color: #d0d0d0;
+            display: none;
+            transition: all 0.3s ease;
+        }
+        #cta {
+            text-align: center;
+            margin: 30px 0;
+        }
+        #cta button {
+            background-color: #66b3ff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #cta button:hover {
+            background-color: #5599cc;
+        }
+        #formulario-contacto {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        #formulario-contacto form {
+            display: flex;
+            flex-direction: column;
+        }
+        #formulario-contacto label, #formulario-contacto input, #formulario-contacto textarea {
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+        #formulario-contacto input, #formulario-contacto textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        #social-media a {
+            color: #e0e0e0;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        #social-media a:hover {
+            color: #66b3ff;
+        }
+        #contacto a {
+            color: #ffffff; /* Cambiado a blanco para mayor claridad */
+            font-size: 18px;
+            margin: 10px 0;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        #contacto a:hover {
+            color: #66b3ff; /* Color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marquez Soluciones Digitales</h1>
+        <p>Tu negocio conectado</p>
+    </header>
+    <main>
+        <section id="info">
+            <div class="info-section">
+                <h2>Misión</h2>
+                <button onclick="toggleContent('mision')">Ver Misión</button>
+                <p id="mision" class="info-content" style="display: none;">
+                    "Ofrecer soluciones digitales innovadoras y personalizadas que impulsen el crecimiento de nuestros clientes, proporcionando servicios de alta calidad en diseño web, marketing digital y desarrollo de marcas."
+                </p>
+            </div>
+            <div class="info-section">
+                <h2>Visión</h2>
+                <button onclick="toggleContent('vision')">Ver Visión</button>
+                <p id="vision" class="info-content" style="display: none;">
+                    "Convertirnos en el referente líder en soluciones digitales en occidente, y ser reconocidos por nuestra creatividad, excelencia y compromiso con el éxito de nuestros clientes."
+                </p>
+            </div>
+        </section>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <ul>
+                <li>
+                    <img src="https://www.paginaswebs.com/wp-content/uploads/2016/06/slider1.jpg" alt="Diseño web" onclick="toggleDescription(this)">
+                    <p class="descripcion">Creamos sitios web personalizados y adaptados a tus necesidades.</p>
+                </li>
+                <li>
+                    <img src="https://colectivoweb.com/wp-content/uploads/2021/08/para-que-sirve-el-marketing-digital.jpg" alt="Marketing digital" onclick="toggleDescription(this)">
+                    <p class="descripcion">Impulsamos tu negocio en el mundo online.</p>
+                </li>
+                <li>
+                    <img src="https://media-front.elmostrador.cl/2018/12/bigstock-187798399-700x420.jpg" alt="Campañas publicitarias" onclick="toggleDescription(this)">
+                    <p class="descripcion">Diseñamos y ejecutamos campañas publicitarias efectivas.</p>
+                </li>
+                <li>
+                    <img src="https://img.freepik.com/premium-vector/black-glass-shield-with-golden-laurel-wreath_720226-241.jpg" alt="Diseño de logotipos" onclick="toggleDescription(this)">
+                    <p class="descripcion">Creamos logotipos únicos y memorables para tu marca.</p>
+                </li>
+                <li>
+                    <img src="https://img.freepik.com/vector-gratis/plantilla-tarjeta-adornos-florales-dorados_23-2147492144.jpg" alt="Diseño de tarjetas de invitación" onclick="toggleDescription(this)">
+                    <p class="descripcion">Diseñamos tarjetas de invitación personalizadas para cualquier ocasión.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="cta">
+            <button onclick="window.location.href='#contacto'">Contáctanos ahora</button>
+        </section>
+        <section id="formulario-contacto">
+            <h2>Formulario de Contacto</h2>
+            <form action="mailto:jmarqueziza@gmail.com" method="POST" enctype="text/plain">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <a href="https://wa.me/50497308146" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:jmarqueziza@gmail.com"><i class="fas fa-envelope"></i> Correo</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Marquez Soluciones Digitales</p>
+        <div id="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleDescription(element) {
+            const description = element.nextElementSibling;
+            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
